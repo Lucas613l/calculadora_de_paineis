@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Painéis Solares</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -13,21 +12,22 @@
     <h1>Calculadora de Painéis Solares</h1>
 
     <label>Consumo médio de energia mensal (kWh):</label>
-    <input type="text" id="consumo" placeholder="Exemplo: 191,50" required>
+    <input type="number" id="consumo" placeholder="Exemplo: 191,50" step="0.01" required>
 
     <label>Irradiação solar média diária na região (h/dia):</label>
-    <input type="text" id="irradiacao" placeholder="Exemplo: 5,10" required>
+    <input type="number" id="irradiacao" placeholder="Exemplo: 5,10" step="0.01" required>
 
     <label>Potência do painel solar (W):</label>
-    <input type="text" id="potencia" placeholder="Exemplo: 150" required>
+    <input type="number" id="potencia" placeholder="Exemplo: 150" required>
 
     <label>Eficiência do painel solar (%):</label>
-    <input type="text" id="eficiencia" placeholder="Exemplo: 18,20" required>
+    <input type="number" id="eficiencia" placeholder="Exemplo: 18,20" step="0.01" required>
 
     <button onclick="calcularPaineis()">Calcular</button>
 
     <div class="result" id="resultado"></div>
 </div>
 
-</body> 
+<script src="script.js"></script>
+</body>
 </html>
