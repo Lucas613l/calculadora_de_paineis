@@ -8,12 +8,13 @@ function calcularPaineis() {
         document.getElementById('resultado').innerHTML = "Por favor, preencha todos os campos corretamente.";
         return;
     }
-        // Geração mensal de energia por painel em kWh
-const geracaoPainelMensal = (potenciaPainel / 1000) * irradiacaoDiaria * 30 * (eficienciaPainel / 100);
+
+    // Geração mensal de energia por painel em kWh
+    const geracaoPainelMensal = (potenciaPainel / 1000) * irradiacaoDiaria * 30 * eficienciaPainel;
+
     // Número de painéis necessários (arredondando para baixo)
     const numPaineis = Math.floor(consumoMensal / geracaoPainelMensal);
 
-    
     // Área necessária para instalação (média de 1,7m² por painel)
     const areaPorPainel = 1.7; 
     const areaTotal = numPaineis * areaPorPainel;
